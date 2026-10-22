@@ -35,13 +35,36 @@
     #top img { height: 380px !important; }
     #menu, #location, #about { padding-left: 16px !important; padding-right: 16px !important; }
   }
+  /* Phones: one-line header, centered content */
+  @media (max-width: 640px) {
+    [id] { scroll-margin-top: 70px; }
+    .site-nav { flex-wrap: nowrap !important; padding: 10px 16px !important; gap: 10px !important; }
+    .site-nav > a > img { width: 40px !important; height: 40px !important; }
+    .site-nav > a > span { display: none; }
+    .site-nav > div { flex-wrap: nowrap !important; gap: 14px !important; }
+    .site-nav > div > a { font-size: 14px !important; white-space: nowrap; }
+    .site-nav > div > a:last-child { min-height: 36px !important; padding: 8px 14px !important; font-size: 13px !important; }
+    .nav-long { display: none; }
+    body { text-align: center; }
+    #top > div > div:first-child { align-items: center; }
+    #top > div > div:first-child > span { align-self: center !important; }
+    #top p { margin-left: auto !important; margin-right: auto !important; }
+    #top > div > div:first-child > div, #location a { justify-content: center; }
+    #location > div { align-items: center; }
+    #location a { align-self: center; }
+    #menu > div > div:first-child { justify-content: center; }
+    #menu [style*="space-between"] { justify-content: center !important; flex-wrap: wrap; }
+    #menu > div[style*="#0B3C27"] > div { justify-content: center !important; align-items: center; }
+    #menu [style*="gap: 12px"] { justify-content: center; }
+    .site-footer { justify-content: center !important; text-align: center; }
+  }
 </style>
 </head>
 <body>
 <div style="width: 100%; box-sizing: border-box; display: flex; flex-direction: column; background: #F6F3E9; color: #241C10; font-family: 'Work Sans', sans-serif;">
 
   <!-- NAV -->
-  <div style="position: sticky; top: 0; z-index: 20; width: 100%; box-sizing: border-box; background: #F6F3E9; border-bottom: 2px solid #0B3C27; display: flex; align-items: center; justify-content: space-between; padding: 12px 32px; flex-wrap: wrap; gap: 12px;">
+  <div class="site-nav" style="position: sticky; top: 0; z-index: 20; width: 100%; box-sizing: border-box; background: #F6F3E9; border-bottom: 2px solid #0B3C27; display: flex; align-items: center; justify-content: space-between; padding: 12px 32px; flex-wrap: wrap; gap: 12px;">
     <a href="#top" style="display: flex; align-items: center; gap: 12px; color: #0B3C27;">
       <img src="images/kathis-logo-160.png" alt="Kathis Wraps logo" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
       <span style="font-family: 'Archivo Black', sans-serif; font-size: 22px; letter-spacing: 1px; color: #0B3C27;">KATHIS</span>
@@ -49,8 +72,8 @@
     <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
       <a href="#menu" style="font-weight: 600; font-size: 15px; color: #241C10;">Menu</a>
       <a href="#about" style="font-weight: 600; font-size: 15px; color: #241C10;">About</a>
-      <a href="#location" style="font-weight: 600; font-size: 15px; color: #241C10;">Location &amp; Hours</a>
-      <a href="https://www.google.com/maps/search/?api=1&amp;query=Yuba+Sutter+Marketplace,+Yuba+City,+CA" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; background: #0B3C27; color: #F6F3E9; border-radius: 999px; font-weight: 600; font-size: 14px;">Get Directions</a>
+      <a href="#location" style="font-weight: 600; font-size: 15px; color: #241C10;"><span class="nav-long">Location &amp; </span>Hours</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Yuba+Sutter+Marketplace,+Yuba+City,+CA" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; background: #0B3C27; color: #F6F3E9; border-radius: 999px; font-weight: 600; font-size: 14px;"><span class="nav-long">Get&nbsp;</span>Directions</a>
     </div>
   </div>
 
@@ -424,7 +447,7 @@
   </div>
 
   <!-- FOOTER -->
-  <div style="width: 100%; box-sizing: border-box; background: #241C10; padding: 40px 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+  <div class="site-footer" style="width: 100%; box-sizing: border-box; background: #241C10; padding: 40px 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
     <div style="display: flex; align-items: center; gap: 12px;">
       <img loading="lazy" src="images/kathis-logo-160.png" alt="Kathis Wraps logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
       <span style="font-family: 'Archivo Black', sans-serif; font-size: 17px; letter-spacing: 1px; color: #F6F3E9;">KATHIS</span>
