@@ -77,6 +77,13 @@
     .job-head { justify-content: space-between !important; }
     .nav-wide { display: none; }
   }
+  /* Franchise */
+  .apply-form textarea { font: 400 16px 'Work Sans', sans-serif; color: #241C10; background: #FFFFFF; border: 1px solid #CFC6B1; border-radius: 10px; padding: 12px 14px; min-height: 110px; box-sizing: border-box; width: 100%; resize: vertical; }
+  .fr-card { background: #F6F3E9; border: 1px solid #E7E0CF; border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 10px; text-align: left; }
+  @media (max-width: 640px) {
+    #franchise { padding-left: 16px !important; padding-right: 16px !important; }
+    .fr-card { text-align: center; align-items: center; }
+  }
   /* Application submitted banner */
   .apply-toast { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); z-index: 100; width: calc(100% - 32px); max-width: 560px; box-sizing: border-box; display: none; align-items: center; gap: 14px; background: #0B3C27; color: #F6F3E9; border: 2px solid #F2A15E; border-radius: 16px; padding: 16px 18px; box-shadow: 0 12px 32px rgba(0,0,0,.25); font-family: 'Work Sans', sans-serif; text-align: left; }
   .apply-toast.show { display: flex; }
@@ -89,7 +96,7 @@
 <body>
 <div id="apply-toast" class="apply-toast" role="status" aria-live="polite">
   <div class="tick" aria-hidden="true">✓</div>
-  <div><strong>Your application was submitted successfully.</strong><span class="msg">Thank you for applying to Kathis. We'll be in touch.</span></div>
+  <div><strong id="toast-title">Your application was submitted successfully.</strong><span class="msg" id="toast-msg">Thank you for applying to Kathis. We'll be in touch.</span></div>
   <button type="button" aria-label="Close" onclick="document.getElementById('apply-toast').classList.remove('show')">×</button>
 </div>
 <div style="width: 100%; box-sizing: border-box; display: flex; flex-direction: column; background: #F6F3E9; color: #241C10; font-family: 'Work Sans', sans-serif;">
@@ -105,6 +112,7 @@
       <a href="#about" style="font-weight: 600; font-size: 15px; color: #241C10;">About</a>
       <a href="#location" style="font-weight: 600; font-size: 15px; color: #241C10;"><span class="nav-long">Location &amp; </span>Hours</a>
       <a class="nav-wide" href="#careers" style="font-weight: 600; font-size: 15px; color: #241C10;">Careers</a>
+      <a class="nav-wide" href="#franchise" style="font-weight: 600; font-size: 15px; color: #241C10;">Franchise</a>
       <a href="https://www.google.com/maps/search/?api=1&amp;query=Yuba+Sutter+Marketplace,+Yuba+City,+CA" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; background: #0B3C27; color: #F6F3E9; border-radius: 999px; font-weight: 600; font-size: 14px;"><span class="nav-long">Get&nbsp;</span>Directions</a>
     </div>
   </div>
@@ -635,6 +643,75 @@
     </form>
   </div>
 
+  <!-- FRANCHISE -->
+  <div id="franchise" style="width: 100%; box-sizing: border-box; background: #FFFFFF; padding: 80px 32px; display: flex; flex-direction: column; align-items: center; gap: 40px;">
+
+    <div style="max-width: 760px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px;">
+      <span style="font-family: 'Archivo Black', sans-serif; font-size: 14px; letter-spacing: 3px; color: #B4561A;">GROW WITH US</span>
+      <h2 style="margin: 0; font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: clamp(30px, 3.4vw, 42px); color: #0B3C27;">OWN A KATHIS</h2>
+      <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #241C10;">Kathis is built to repeat: one bread, shared proteins, a short menu and a line any new hire can learn in a day. We're getting ready to franchise and are building a list of people who want to bring Kathis to their town.</p>
+    </div>
+
+    <div style="width: 100%; max-width: 1200px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      <div class="fr-card">
+        <h3 style="margin: 0; font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 22px; color: #0B3C27;">Simple to run</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4438;">No tandoor and no skilled chefs. Every step follows written recipe and time/temperature cards.</p>
+      </div>
+      <div class="fr-card">
+        <h3 style="margin: 0; font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 22px; color: #0B3C27;">Small footprint</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4438;">Designed for food courts and former restaurant spaces with an existing hood.</p>
+      </div>
+      <div class="fr-card">
+        <h3 style="margin: 0; font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 22px; color: #0B3C27;">Indian classics, American favorites</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4438;">A menu that works for people who grew up on Kathi rolls and people trying one for the first time.</p>
+      </div>
+    </div>
+
+    <form id="franchise-form" class="apply-form" action="https://formsubmit.co/jatinder@fastconceptfoods.com" method="POST" style="width: 100%; max-width: 720px; box-sizing: border-box; background: #0B3C27; color: #F6F3E9; border-radius: 22px; padding: 34px 32px 36px; display: flex; flex-direction: column; gap: 18px;">
+      <input type="hidden" name="_cc" value="dann@kathisrestaurant.com">
+      <input type="hidden" name="_subject" value="New franchise inquiry from kathisrestaurant.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://kathisrestaurant.com/?inquiry=1#franchise">
+      <input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off">
+
+      <div style="text-align: center; display: flex; flex-direction: column; gap: 6px;">
+        <h3 style="margin: 0; font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 30px); color: #F6F3E9;">JOIN THE FRANCHISE INTEREST LIST</h3>
+        <p style="margin: 0; font-size: 15px; color: #DCE6DD;">Tell us a little about yourself and where you'd like to open. We'll contact you when franchising opens.</p>
+      </div>
+      <div id="inquiry-thanks" style="display: none; background: #F6F3E9; color: #0B3C27; border-radius: 12px; padding: 14px 18px; font-weight: 600; text-align: center;">Thanks! You're on the list. We'll be in touch.</div>
+
+      <label class="f">Full name
+        <input type="text" name="Name" autocomplete="name" required>
+      </label>
+      <div class="f-row">
+        <label class="f">Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label class="f">Phone
+          <input type="tel" name="Phone" autocomplete="tel" required>
+        </label>
+      </div>
+      <div class="f-row">
+        <label class="f">City or area you're interested in
+          <input type="text" name="Area of interest" required>
+        </label>
+        <label class="f">State
+          <input type="text" name="State" autocomplete="address-level1" value="CA" required>
+        </label>
+      </div>
+      <fieldset class="f f-radio">
+        <legend>Do you have a location in mind?</legend>
+        <label><input type="radio" name="Location in mind" value="Yes" required> Yes</label>
+        <label><input type="radio" name="Location in mind" value="Still looking"> Still looking</label>
+      </fieldset>
+      <label class="f">Restaurant or business experience
+        <textarea name="Experience" placeholder="Briefly, what have you run or managed before?"></textarea>
+      </label>
+      <button type="submit" style="align-self: center; min-height: 50px; padding: 14px 34px; background: #C7621F; color: #FFFFFF; border: 0; border-radius: 999px; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 16px; cursor: pointer;">Send my interest</button>
+      <p style="margin: 0; text-align: center; font-size: 12px; line-height: 1.5; color: #B9C9BD;">Kathis is not offering franchises yet, and this page is not an offer to sell a franchise. An offer can be made only through a Franchise Disclosure Document, in states where the offer is registered or exempt. Your details are used only to contact you about franchising.</p>
+    </form>
+  </div>
+
   <!-- FOOTER -->
   <div class="site-footer" style="width: 100%; box-sizing: border-box; background: #241C10; padding: 40px 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
     <div style="display: flex; align-items: center; gap: 12px;">
@@ -642,7 +719,7 @@
       <span style="font-family: 'Archivo Black', sans-serif; font-size: 17px; letter-spacing: 1px; color: #F6F3E9;">KATHIS</span>
     </div>
     <span style="font-size: 14px; color: #CABFA8;">Yuba Sutter Marketplace, Yuba City, CA</span>
-    <a href="#careers" style="font-size: 14px; font-weight: 600; color: #F2A15E;">Careers · We're hiring</a>
+    <span style="display: flex; gap: 18px; flex-wrap: wrap; justify-content: center;"><a href="#careers" style="font-size: 14px; font-weight: 600; color: #F2A15E;">Careers · We're hiring</a><a href="#franchise" style="font-size: 14px; font-weight: 600; color: #F2A15E;">Franchising</a></span>
     <span style="font-size: 12px; color: #A89C86; width: 100%; text-align: center;">© 2026 Kathis. All rights reserved.</span>
   </div>
 
@@ -659,6 +736,19 @@
           setTimeout(function () { toast.classList.remove('show'); }, 10000);
         }
         if (history.replaceState) history.replaceState(null, '', location.pathname + '#careers');
+      }
+      if (new URLSearchParams(location.search).get('inquiry') === '1') {
+        var it = document.getElementById('inquiry-thanks');
+        if (it) it.style.display = 'block';
+        var tt = document.getElementById('toast-title'), tm = document.getElementById('toast-msg');
+        if (tt) tt.textContent = 'Your franchise inquiry was sent.';
+        if (tm) tm.textContent = "Thanks for your interest in Kathis. We'll be in touch.";
+        var t2 = document.getElementById('apply-toast');
+        if (t2) {
+          t2.classList.add('show');
+          setTimeout(function () { t2.classList.remove('show'); }, 10000);
+        }
+        if (history.replaceState) history.replaceState(null, '', location.pathname + '#franchise');
       }
     } catch (e) {}
   })();
