@@ -45,6 +45,7 @@
     .site-nav > div > a { font-size: 14px !important; white-space: nowrap; }
     .site-nav > div > a:last-child { min-height: 36px !important; padding: 8px 14px !important; font-size: 13px !important; }
     .nav-long { display: none; }
+    .nav-tag { display: none; }
     body { text-align: center; }
     #top > div > div:first-child { align-items: center; }
     #top > div > div:first-child > span { align-self: center !important; }
@@ -61,6 +62,10 @@
     .combo-card { justify-content: center !important; text-align: center; }
     .combo-card > div { align-items: center; justify-content: center; }
     .sig { flex-direction: column; text-align: center !important; padding: 22px 18px !important; }
+  }
+  /* Small phones: room for the App link */
+  @media (max-width: 400px) {
+    .nav-about { display: none; }
   }
   /* Careers form */
   .apply-form .f { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #F6F3E9; text-align: left; border: 0; margin: 0; padding: 0; min-width: 0; }
@@ -113,8 +118,9 @@
     </a>
     <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
       <a href="#menu" style="font-weight: 600; font-size: 15px; color: #241C10;">Menu</a>
-      <a href="#about" style="font-weight: 600; font-size: 15px; color: #241C10;">About</a>
+      <a class="nav-about" href="#about" style="font-weight: 600; font-size: 15px; color: #241C10;">About</a>
       <a href="#location" style="font-weight: 600; font-size: 15px; color: #241C10;"><span class="nav-long">Location &amp; </span>Hours</a>
+      <a href="app/" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 15px; color: #241C10;">App<span class="nav-tag" style="font-size: 10px; font-weight: 700; letter-spacing: .5px; line-height: 1.4; background: #C7621F; color: #FFFFFF; border-radius: 999px; padding: 2px 7px;">NEW</span></a>
       <a class="nav-wide" href="#careers" style="font-weight: 600; font-size: 15px; color: #241C10;">Careers</a>
       <a class="nav-wide" href="#franchise" style="font-weight: 600; font-size: 15px; color: #241C10;">Franchise</a>
       <a href="https://www.google.com/maps/search/?api=1&amp;query=Yuba+Sutter+Marketplace,+Yuba+City,+CA" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; background: #0B3C27; color: #F6F3E9; border-radius: 999px; font-weight: 600; font-size: 14px;"><span class="nav-long">Get&nbsp;</span>Directions</a>
