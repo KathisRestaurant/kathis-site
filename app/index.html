@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Kathis App — Order ahead, earn points</title>
+<meta name="description" content="How the Kathis app works: order ahead for pickup at Yuba Sutter Marketplace, earn points for free food, use deals, and get your Mall Employee or Friends &amp; Family discount.">
+<meta property="og:title" content="The Kathis App">
+<meta property="og:description" content="Order ahead for pickup, earn points for free food, and get your member discount.">
+<meta property="og:image" content="https://kathisrestaurant.com/images/philly-steak-kathi.jpg">
+<meta property="og:url" content="https://kathisrestaurant.com/app/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B3C27">
+<meta name="color-scheme" content="light only">
+<link rel="canonical" href="https://kathisrestaurant.com/app/">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Work Sans', sans-serif; background: #F6F3E9; color: #241C10; }
+  a { color: #B4561A; text-decoration: none; }
+  a:hover { color: #0B3C27; }
+  html { scroll-behavior: smooth; }
+  [id] { scroll-margin-top: 90px; }
+  img { max-width: 100%; }
+  .eyebrow { font-family: 'Archivo Black', sans-serif; font-size: 14px; letter-spacing: 3px; color: #B4561A; }
+  h1, h2, h3 { font-family: 'Archivo Black', sans-serif; font-weight: 400; color: #0B3C27; margin: 0; }
+  h2 { font-size: clamp(26px, 3vw, 34px); }
+  h3 { font-size: 18px; letter-spacing: .3px; }
+  p, li { font-size: 17px; line-height: 1.65; }
+  p { margin: 0; }
+  .section { width: 100%; box-sizing: border-box; padding: 56px 32px; display: flex; justify-content: center; }
+  .section.alt { background: #FFFDF7; border-top: 1px solid #E7E0CF; border-bottom: 1px solid #E7E0CF; }
+  .wrap { width: 100%; max-width: 900px; display: flex; flex-direction: column; gap: 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .card { background: #FFFFFF; border: 1px solid #E7E0CF; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+  .card p, .card li { font-size: 16px; }
+  .steps { margin: 0; padding: 0; list-style: none; counter-reset: step; display: flex; flex-direction: column; gap: 14px; }
+  .steps li { counter-increment: step; position: relative; padding-left: 52px; }
+  .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 36px; height: 36px; border-radius: 50%; background: #0B3C27; color: #F6F3E9; font-family: 'Archivo Black', sans-serif; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+  .steps strong { color: #0B3C27; }
+  table { width: 100%; border-collapse: collapse; background: #FFFFFF; border: 1px solid #E7E0CF; border-radius: 18px; overflow: hidden; }
+  th, td { text-align: left; padding: 14px 18px; font-size: 16px; border-bottom: 1px solid #EFE9DA; }
+  th { background: #0B3C27; color: #F6F3E9; font-weight: 600; }
+  td.num { font-weight: 700; color: #B4561A; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  tr:last-child td { border-bottom: 0; }
+  .note { background: #0B3C27; color: #F6F3E9; border-radius: 18px; padding: 20px 22px; }
+  .note p { font-size: 16px; color: #DCE6DD; }
+  .note strong { color: #F2A15E; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: #F2A15E; color: #241C10; border-radius: 999px; padding: 8px 16px; font-weight: 700; font-size: 14px; }
+  .toc { display: flex; flex-wrap: wrap; gap: 10px; }
+  .toc a { background: #FFFFFF; border: 1px solid #E7E0CF; border-radius: 999px; padding: 9px 16px; font-weight: 600; font-size: 14px; color: #241C10; }
+  .toc a:hover { border-color: #0B3C27; }
+  details { background: #FFFFFF; border: 1px solid #E7E0CF; border-radius: 14px; padding: 16px 20px; }
+  details + details { margin-top: 10px; }
+  summary { cursor: pointer; font-weight: 700; font-size: 17px; color: #0B3C27; }
+  details p { margin-top: 10px; font-size: 16px; }
+  @media (max-width: 640px) {
+    [id] { scroll-margin-top: 70px; }
+    .site-nav { padding: 10px 16px !important; }
+    .site-nav > a > img { width: 40px !important; height: 40px !important; }
+    .section { padding: 44px 16px; }
+    .hero { padding: 40px 16px 44px !important; }
+    .hero img { height: 220px !important; }
+    th, td { padding: 12px 12px; font-size: 15px; }
+    .site-footer { justify-content: center !important; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div style="width: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+
+  <!-- NAV -->
+  <div class="site-nav" style="position: sticky; top: 0; z-index: 20; width: 100%; box-sizing: border-box; background: #F6F3E9; border-bottom: 2px solid #0B3C27; display: flex; align-items: center; justify-content: space-between; padding: 12px 32px; gap: 12px;">
+    <a href="../" style="display: flex; align-items: center; gap: 12px; color: #0B3C27;">
+      <img src="../images/kathis-logo-160.png" alt="Kathis Wraps logo" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+      <span style="font-family: 'Archivo Black', sans-serif; font-size: 22px; letter-spacing: 1px; color: #0B3C27;">KATHIS</span>
+    </a>
+    <a href="../#menu" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; background: #0B3C27; color: #F6F3E9; border-radius: 999px; font-weight: 600; font-size: 14px;">See the menu</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero" style="width: 100%; box-sizing: border-box; background: #0B3C27; color: #F6F3E9; padding: 64px 32px; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 900px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center;">
+      <div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 16px;">
+        <span class="eyebrow" style="color: #F2A15E;">THE KATHIS APP</span>
+        <h1 style="color: #F6F3E9; font-size: clamp(32px, 4.4vw, 50px); line-height: 1.08;">ORDER AHEAD. SKIP THE LINE. EARN FREE FOOD.</h1>
+        <p style="font-size: 18px; color: #DCE6DD;">Order on your phone, pick it up hot at our counter in the Yuba Sutter Marketplace food court, and earn points toward free Kathis.</p>
+        <span class="pill">Coming soon · we'll post the link here at launch</span>
+      </div>
+      <img src="../images/philly-steak-kathi.jpg" alt="Philly Steak Kathi" style="flex: 1 1 280px; width: 100%; max-width: 380px; height: 300px; object-fit: cover; border-radius: 20px; border: 3px solid #F2A15E;">
+    </div>
+  </div>
+
+  <!-- CONTENTS -->
+  <div class="section" style="padding-bottom: 8px;">
+    <div class="wrap">
+      <nav class="toc" aria-label="On this page">
+        <a href="#start">Getting started</a>
+        <a href="#order">Ordering</a>
+        <a href="#rewards">Rewards</a>
+        <a href="#deals">Deals</a>
+        <a href="#status">Member discounts</a>
+        <a href="#account">Your account</a>
+        <a href="#faq">Questions</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- GETTING STARTED -->
+  <div class="section" id="start">
+    <div class="wrap">
+      <span class="eyebrow">GETTING STARTED</span>
+      <h2>SIGN IN WITH JUST YOUR EMAIL</h2>
+      <ol class="steps">
+        <li><strong>Open the Kathis app.</strong> It works in your phone's web browser or on a computer. iPhone and Android versions are on the way.</li>
+        <li><strong>Enter your email.</strong> No password to remember. We email you a 6-digit code from Kathi's Wraps.</li>
+        <li><strong>Type in the code.</strong> That's it. Your account is ready, with your own member code and 0 points to start.</li>
+      </ol>
+      <p>You can look at the menu and build a bag without signing in. You'll sign in when you check out.</p>
+    </div>
+  </div>
+
+  <!-- ORDERING -->
+  <div class="section alt" id="order">
+    <div class="wrap">
+      <span class="eyebrow">ORDERING</span>
+      <h2>FROM PHONE TO PICKUP</h2>
+      <ol class="steps">
+        <li><strong>Pick your Kathis.</strong> Tap any item to add it to your bag. Make any Kathi a <strong>combo</strong> with fries and a fountain drink for $5 more.</li>
+        <li><strong>Choose a pickup time.</strong> "As soon as possible" is usually about 10 minutes, or pick a time in 15-minute steps. When we're closed you can schedule for the next day we're open. Online orders stop 15 minutes before closing.</li>
+        <li><strong>Pay in the app.</strong> Pay by card, and save it for next time if you like. Sales tax is added at checkout. Card payments are handled by Square; we never see or store your full card number.</li>
+        <li><strong>Pick it up.</strong> Your order screen shows an order number and updates as we go: received, preparing, ready. When it says ready, show the number at the Kathis counter in the food court.</li>
+      </ol>
+      <div class="note">
+        <p><strong>Your order history</strong> lives in Account. Open any past order to see what you had, what you paid and the points you earned, or tap <strong>Reorder</strong> to put the same items in a new bag.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- REWARDS -->
+  <div class="section" id="rewards">
+    <div class="wrap">
+      <span class="eyebrow">REWARDS</span>
+      <h2>10 POINTS FOR EVERY $1</h2>
+      <p>Every app order earns 10 points for each whole dollar you pay, after discounts and before tax. A $14 order earns 140 points. Spend points on free food:</p>
+      <table>
+        <thead><tr><th scope="col">Reward</th><th scope="col">Points</th></tr></thead>
+        <tbody>
+          <tr><td>Fountain Drink</td><td class="num">400</td></tr>
+          <tr><td>Mango Lassi</td><td class="num">700</td></tr>
+          <tr><td>Fries</td><td class="num">700</td></tr>
+          <tr><td>Paneer or Veggie Kathi</td><td class="num">1,300</td></tr>
+          <tr><td>Any chicken or pork Kathi</td><td class="num">1,700</td></tr>
+        </tbody>
+      </table>
+      <div class="grid">
+        <div class="card"><h3>HOW TO USE ONE</h3><p>Open Rewards, pick a reward you have enough points for, and it's added to your bag for $0.</p></div>
+        <div class="card"><h3>THE FINE PRINT</h3><p>One reward per order, as a single item (no combo), with at least one paid item in the bag. If an order is canceled, the points come back.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEALS -->
+  <div class="section alt" id="deals">
+    <div class="wrap">
+      <span class="eyebrow">DEALS</span>
+      <h2>APP-ONLY DEALS</h2>
+      <div class="grid">
+        <div class="card"><span class="eyebrow" style="font-size: 20px; letter-spacing: 1px;">$5 OFF</span><h3>YOUR FIRST APP ORDER</h3><p>$5 off your first order of $20 or more in the app.</p></div>
+        <div class="card"><span class="eyebrow" style="font-size: 20px; letter-spacing: 1px;">2 FOR $20</span><h3>TWO-KATHI TUESDAY</h3><p>Any two chicken, pork or veg Kathis for $20, every Tuesday.</p></div>
+        <div class="card"><span class="eyebrow" style="font-size: 20px; letter-spacing: 1px;">$2 OFF</span><h3>LASSI WITH YOUR KATHI</h3><p>$2 off a Mango Lassi when you order any Kathi.</p></div>
+      </div>
+      <p>Pick a deal on the Deals tab or in your bag. One deal per order. Deals don't combine with a member discount; your bag automatically uses whichever saves you more.</p>
+    </div>
+  </div>
+
+  <!-- MEMBER DISCOUNTS -->
+  <div class="section" id="status">
+    <div class="wrap">
+      <span class="eyebrow">MEMBER DISCOUNTS</span>
+      <h2>WORK AT THE MALL? WE'VE GOT YOU.</h2>
+      <div class="grid">
+        <div class="card"><span class="eyebrow" style="font-size: 20px; letter-spacing: 1px;">10% OFF</span><h3>MALL EMPLOYEE</h3><p>For people who work at Yuba Sutter Marketplace. Verified with your mall employee badge.</p></div>
+        <div class="card"><span class="eyebrow" style="font-size: 20px; letter-spacing: 1px;">12% OFF</span><h3>FRIENDS &amp; FAMILY</h3><p>By invitation from the owner.</p></div>
+      </div>
+      <h3 style="margin-top: 8px;">HOW TO GET IT</h3>
+      <ol class="steps">
+        <li><strong>Request it in the app.</strong> Go to Account, find <strong>Request change of status</strong>, and tap Request next to the one that fits.</li>
+        <li><strong>Get verified.</strong> Next time you're at the counter, open Account and show your member code (it looks like KW-AB12CD) and your proof, like your mall badge.</li>
+        <li><strong>Save on every app order.</strong> Once approved, the discount applies automatically.</li>
+      </ol>
+      <p>Member discounts apply to orders placed in the app. You can cancel a waiting request, or go back to regular prices, from Account at any time. Kathis team members get their perks automatically when they sign in with their Kathis work email.</p>
+    </div>
+  </div>
+
+  <!-- ACCOUNT -->
+  <div class="section alt" id="account">
+    <div class="wrap">
+      <span class="eyebrow">YOUR ACCOUNT</span>
+      <h2>EVERYTHING IN ONE PLACE</h2>
+      <div class="grid">
+        <div class="card"><h3>MEMBER CODE</h3><p>Your personal code, shown in Account. Staff use it to verify your discount at the counter.</p></div>
+        <div class="card"><h3>SAVED CARDS</h3><p>Add or remove cards and pick your default for faster checkout.</p></div>
+        <div class="card"><h3>ORDER HISTORY</h3><p>Every app order, with a Reorder button for your usuals.</p></div>
+        <div class="card"><h3>SIGN OUT</h3><p>Use Sign out in the top bar or at the bottom of Account. Sign back in anytime with a new email code.</p></div>
+      </div>
+      <div class="note">
+        <p><strong>Deleting your account:</strong> go to Account, tap <strong>Delete my account</strong> at the bottom, and confirm. This removes your sign-in, your points, your status and your saved cards right away, and it can't be undone. We keep a record of past orders for our books, with your name removed. You're welcome to join again later with the same email, starting fresh.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section" id="faq">
+    <div class="wrap">
+      <span class="eyebrow">QUESTIONS</span>
+      <h2>GOOD TO KNOW</h2>
+      <div>
+        <details><summary>Do I earn points when I order at the register?</summary><p>Not yet. Points, deals and member discounts are for orders placed in the app.</p></details>
+        <details><summary>I didn't get my sign-in code.</summary><p>Check your spam or promotions folder for an email from Kathi's Wraps. Codes expire after an hour, so request a new one if it's been a while.</p></details>
+        <details><summary>Can I order when you're closed?</summary><p>Yes. Choose a pickup time on the next day we're open. Same-day orders stop 15 minutes before closing.</p></details>
+        <details><summary>What if my order is canceled?</summary><p>If you were charged, the refund goes back to your card. Any points you spent on a reward come back to your account.</p></details>
+        <details><summary>Can I use a deal and my member discount together?</summary><p>No, they don't stack. Your bag picks whichever saves you more.</p></details>
+        <details><summary>Something looks wrong with my order.</summary><p>Come to the counter with your order number and we'll sort it out.</p></details>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="site-footer" style="width: 100%; box-sizing: border-box; background: #241C10; padding: 40px 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+    <a href="../" style="display: flex; align-items: center; gap: 12px;">
+      <span style="display: block; width: 40px; height: 40px; border-radius: 50%; overflow: hidden; flex: none;"><img loading="lazy" src="../images/kathis-logo-160.png" alt="Kathis Wraps logo" style="display: block; width: 40px; height: 40px; transform: scale(1.17);"></span>
+      <span style="font-family: 'Archivo Black', sans-serif; font-size: 17px; letter-spacing: 1px; color: #F6F3E9;">KATHIS</span>
+    </a>
+    <span style="font-size: 14px; color: #CABFA8;">Yuba Sutter Marketplace, Yuba City, CA</span>
+    <span style="display: flex; gap: 18px; flex-wrap: wrap; justify-content: center;"><a href="../#menu" style="font-size: 14px; font-weight: 600; color: #F2A15E;">Menu</a><a href="../#location" style="font-size: 14px; font-weight: 600; color: #F2A15E;">Location &amp; Hours</a><a href="../#careers" style="font-size: 14px; font-weight: 600; color: #F2A15E;">Careers</a></span>
+    <span style="font-size: 12px; color: #A89C86; width: 100%; text-align: center;">© 2026 Kathis. All rights reserved.</span>
+  </div>
+
+</div>
+</body>
+</html>
